@@ -1,14 +1,20 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TattooVR" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +22,768 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="11" translatesAutoresizingMaskIntoConstraints="NO" id="vW0-2e-QFz">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выбери татуировку" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8e7-6C-mol">
+                                <rect key="frame" x="100" y="323.5" width="174" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0v7-e7-vaf">
+                                <rect key="frame" x="78" y="617" width="218" height="30"/>
+                                <color key="backgroundColor" red="0.92858311520000003" green="0.41229485389999998" blue="0.16936866810000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="8nj-HP-dge"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <state key="normal" title="дальше">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="urd-E0-Pbb" kind="presentation" modalTransitionStyle="flipHorizontal" id="2QE-8D-jOj"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8e7-6C-mol" firstAttribute="centerY" secondItem="vW0-2e-QFz" secondAttribute="centerY" id="I4r-v4-kzP"/>
+                            <constraint firstItem="8e7-6C-mol" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="JD4-5j-DUX"/>
+                            <constraint firstItem="vW0-2e-QFz" firstAttribute="centerX" secondItem="0v7-e7-vaf" secondAttribute="centerX" id="JNu-GI-LBu"/>
+                            <constraint firstItem="vW0-2e-QFz" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="VtP-rS-GkB"/>
+                            <constraint firstItem="8e7-6C-mol" firstAttribute="centerX" secondItem="0v7-e7-vaf" secondAttribute="centerX" id="iF2-xp-IBd"/>
+                            <constraint firstItem="vW0-2e-QFz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="kb8-2y-7Rx"/>
+                            <constraint firstItem="0v7-e7-vaf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tYX-LM-vCB"/>
+                            <constraint firstAttribute="bottom" secondItem="0v7-e7-vaf" secondAttribute="bottom" constant="20" symbolic="YES" id="tbX-Kb-UhW"/>
+                            <constraint firstItem="0v7-e7-vaf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="62" id="yly-bq-60w"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="135.19999999999999" y="138.0809595202399"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Daq-px-qMd">
+            <objects>
+                <viewController id="urd-E0-Pbb" customClass="ViewController" customModule="TattooVR" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yWM-6w-o1L"/>
+                        <viewControllerLayoutGuide type="bottom" id="fco-PQ-wJS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6gn-aW-2n7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="22" translatesAutoresizingMaskIntoConstraints="NO" id="fOA-56-v9W">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Примерь, сохрани и поделись с друзьями" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lD2-4I-97E">
+                                <rect key="frame" x="16" y="312" width="343" height="43"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUS-wy-OiV">
+                                <rect key="frame" x="78" y="617" width="218" height="30"/>
+                                <color key="backgroundColor" red="0.30196078430000001" green="0.91764705879999997" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="A3n-LD-7iW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <state key="normal" title="начать">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="2Wh-rJ-dCT" kind="presentation" modalTransitionStyle="flipHorizontal" id="U2s-hP-Xce"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="eUS-wy-OiV" secondAttribute="bottom" constant="20" symbolic="YES" id="2cD-V9-LqO"/>
+                            <constraint firstItem="fOA-56-v9W" firstAttribute="top" secondItem="6gn-aW-2n7" secondAttribute="top" id="6CF-bG-gDG"/>
+                            <constraint firstItem="fOA-56-v9W" firstAttribute="centerX" secondItem="lD2-4I-97E" secondAttribute="centerX" id="CwV-aL-plm"/>
+                            <constraint firstItem="fOA-56-v9W" firstAttribute="leading" secondItem="6gn-aW-2n7" secondAttribute="leading" id="EWi-Hs-Ecs"/>
+                            <constraint firstItem="eUS-wy-OiV" firstAttribute="centerX" secondItem="lD2-4I-97E" secondAttribute="centerX" id="G5l-1O-Ww8"/>
+                            <constraint firstItem="lD2-4I-97E" firstAttribute="leading" secondItem="6gn-aW-2n7" secondAttribute="leadingMargin" id="HAl-I7-rPn"/>
+                            <constraint firstItem="eUS-wy-OiV" firstAttribute="leading" secondItem="6gn-aW-2n7" secondAttribute="leadingMargin" constant="62" id="dti-vI-Apg"/>
+                            <constraint firstItem="fOA-56-v9W" firstAttribute="bottom" secondItem="fco-PQ-wJS" secondAttribute="top" id="iOu-th-fRm"/>
+                            <constraint firstAttribute="trailing" secondItem="fOA-56-v9W" secondAttribute="trailing" id="o14-4r-rfQ"/>
+                            <constraint firstItem="fOA-56-v9W" firstAttribute="centerY" secondItem="lD2-4I-97E" secondAttribute="centerY" id="tU4-0b-C8l"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FCa-mH-Z2R" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="855.20000000000005" y="138.0809595202399"/>
+        </scene>
+        <!--Tattoo VR-->
+        <scene sceneID="hKG-G3-VAH">
+            <objects>
+                <viewController id="54A-k6-z0s" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Cay-gW-1W3"/>
+                        <viewControllerLayoutGuide type="bottom" id="ErL-CX-hwK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IFs-PQ-Iqn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="22" translatesAutoresizingMaskIntoConstraints="NO" id="7Uc-XE-Fsn">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Статьи о татуировках" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nmR-hR-08i">
+                                <rect key="frame" x="16" y="72" width="343" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="u4y-C3-BTq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QBa-xK-EVT">
+                                <rect key="frame" x="16" y="101" width="343" height="30"/>
+                                <color key="backgroundColor" red="0.56326020629999995" green="0.78390139250000002" blue="0.47092233639999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Как выбрать мастера">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="qbN-VK-syV" kind="presentation" id="sG9-Gu-ct8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nmR-hR-08i" firstAttribute="leading" secondItem="IFs-PQ-Iqn" secondAttribute="leadingMargin" id="40t-kP-cC9"/>
+                            <constraint firstItem="nmR-hR-08i" firstAttribute="centerX" secondItem="7Uc-XE-Fsn" secondAttribute="centerX" id="5qI-nz-Y6d"/>
+                            <constraint firstItem="nmR-hR-08i" firstAttribute="centerX" secondItem="IFs-PQ-Iqn" secondAttribute="centerX" id="CTP-ou-BKz"/>
+                            <constraint firstItem="7Uc-XE-Fsn" firstAttribute="top" secondItem="Cay-gW-1W3" secondAttribute="bottom" id="GaL-aV-qz6"/>
+                            <constraint firstItem="QBa-xK-EVT" firstAttribute="centerX" secondItem="IFs-PQ-Iqn" secondAttribute="centerX" id="aBh-ST-kQO"/>
+                            <constraint firstItem="nmR-hR-08i" firstAttribute="leading" secondItem="QBa-xK-EVT" secondAttribute="leading" id="ct3-z7-V9R"/>
+                            <constraint firstItem="QBa-xK-EVT" firstAttribute="top" secondItem="nmR-hR-08i" secondAttribute="bottom" constant="8" symbolic="YES" id="cyY-oS-5rS"/>
+                            <constraint firstItem="7Uc-XE-Fsn" firstAttribute="bottom" secondItem="ErL-CX-hwK" secondAttribute="top" id="fEt-fl-WoA"/>
+                            <constraint firstItem="7Uc-XE-Fsn" firstAttribute="leading" secondItem="IFs-PQ-Iqn" secondAttribute="leading" id="kZg-kS-wBp"/>
+                            <constraint firstItem="nmR-hR-08i" firstAttribute="top" secondItem="Cay-gW-1W3" secondAttribute="bottom" constant="8" symbolic="YES" id="tTq-3a-9SV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Tattoo VR" id="MMW-vl-MUo"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bHm-fZ-fZi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3024.8000000000002" y="135.38230884557723"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Pge-1c-lwF">
+            <objects>
+                <viewController id="qbN-VK-syV" customClass="ViewController" customModule="TattooVR" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AqW-hQ-l2x"/>
+                        <viewControllerLayoutGuide type="bottom" id="Bhn-7A-hK6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eVO-kU-2Kz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Как выбрать мастера" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YH7-UU-1R2">
+                                <rect key="frame" x="16" y="28" width="343" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="knJ-rO-wmN">
+                                <rect key="frame" x="16" y="629" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.92858311520000003" green="0.41229485389999998" blue="0.16936866810000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="назад">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="2Wh-rJ-dCT" kind="presentation" id="gbZ-Ui-3xA"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="30" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lyF-sY-Gcu">
+                                <rect key="frame" x="16" y="60" width="343" height="230"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <mutableString key="text">Приняв взвешенное и обдуманное решение сделать татуировку, человек, как правило, задается вопросом: к какому мастеру пойти, чтобы получить желаемый результат именно в таком виде, каким его рисует вдохновенная фантазия? В Сети можно встретить огромное количество неудачных, смешных, аляповатых татуировок странного содержания, кривых надписей, сделанных с грамматическими ошибками, тату с нарушенными пропорциями. Перечислять можно долго, но как застраховаться от билета в ряды этих «красавцев»? Татуировка делается на долгие годы, от нее не так просто избавиться, а исправить татуировку не так легко, как хотелось бы, так как это долгий, дорогой и болезненный процесс. И бла- бла - бла бла- бла - бла бла- бла - бла бла- бла - бла бла- бла - бла</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sdd-cr-Xdq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3797.5999999999999" y="135.38230884557723"/>
+        </scene>
+        <!--Tattoo VR-->
+        <scene sceneID="Tv2-QT-pwP">
+            <objects>
+                <viewController id="psC-TI-8Rn" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tbS-cG-5u8"/>
+                        <viewControllerLayoutGuide type="bottom" id="pd6-bL-u2Q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Z4y-gE-XaL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" fixedFrame="YES" image="3" translatesAutoresizingMaskIntoConstraints="NO" id="74Z-4X-sTu">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Стили татуировок" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VRz-Ra-sA6">
+                                <rect key="frame" x="16" y="72" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Flx-bC-74x">
+                                <rect key="frame" x="249" y="101" width="110" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.5568627451" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <state key="normal" title="Животные">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJc-Hf-dTx">
+                                <rect key="frame" x="16" y="101" width="110" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.5568627451" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <state key="normal" title="Трайбл">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="LmC-L9-2kZ" kind="presentation" id="Qfg-3X-ane"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Tattoo VR" id="VGR-jy-OQW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gSZ-Rh-bUE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3025" y="-537"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="5qu-BI-EUM">
+            <objects>
+                <viewController id="LmC-L9-2kZ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="db4-cI-6x0"/>
+                        <viewControllerLayoutGuide type="bottom" id="oHj-zv-DAZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XXQ-a0-Obd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Трайбл" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="08Z-KB-SjQ">
+                                <rect key="frame" x="16" y="28" width="343" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="lIb-lP-JZv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="30" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VQZ-Vv-b8v">
+                                <rect key="frame" x="16" y="57" width="343" height="142"/>
+                                <string key="text">Трайбл тату является одним из самых древних стилей татуировок. Современному человеку может показаться, что это простые штрихи, но на самом деле каждая линия несет в себе определенный смысл. В настоящее время существует огромное количество красивых эскизов трайбл тату.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="6" translatesAutoresizingMaskIntoConstraints="NO" id="Vcp-OZ-ZOz">
+                                <rect key="frame" x="16" y="207" width="130" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="3dn-n3-rRa"/>
+                                    <constraint firstAttribute="height" constant="130" id="srO-eO-zkt"/>
+                                </constraints>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="7001d66416995239f2e95ef435b1cb13" translatesAutoresizingMaskIntoConstraints="NO" id="NYd-X1-SAP">
+                                <rect key="frame" x="229" y="207" width="130" height="130"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yj3-Kh-u3u">
+                                <rect key="frame" x="16" y="207" width="130" height="130"/>
+                                <connections>
+                                    <segue destination="bkg-Iw-XBx" kind="presentation" id="L5m-qe-gqF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JoB-vx-7Kt">
+                                <rect key="frame" x="235" y="207" width="130" height="130"/>
+                                <connections>
+                                    <segue destination="6bz-xm-eAt" kind="presentation" id="uX6-1G-Dev"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VLt-p5-PmS">
+                                <rect key="frame" x="16" y="617" width="343" height="30"/>
+                                <color key="backgroundColor" red="0.92858311520000003" green="0.41229485389999998" blue="0.16936866810000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="vBE-5D-cZZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <state key="normal" title="назад">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="2Wh-rJ-dCT" kind="presentation" id="j4A-ps-Lhx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VLt-p5-PmS" firstAttribute="leading" secondItem="VQZ-Vv-b8v" secondAttribute="leading" id="3Uj-Aq-UAZ"/>
+                            <constraint firstItem="Vcp-OZ-ZOz" firstAttribute="top" secondItem="yj3-Kh-u3u" secondAttribute="top" id="5tE-PX-MTy"/>
+                            <constraint firstItem="JoB-vx-7Kt" firstAttribute="leading" secondItem="yj3-Kh-u3u" secondAttribute="trailing" constant="89" id="8dB-Qn-8oy"/>
+                            <constraint firstItem="VLt-p5-PmS" firstAttribute="leading" secondItem="Vcp-OZ-ZOz" secondAttribute="leading" id="EGz-mk-mjx"/>
+                            <constraint firstItem="Vcp-OZ-ZOz" firstAttribute="top" secondItem="XXQ-a0-Obd" secondAttribute="top" constant="207" id="FZP-DU-l9i"/>
+                            <constraint firstItem="VLt-p5-PmS" firstAttribute="leading" secondItem="08Z-KB-SjQ" secondAttribute="leading" id="GGf-vW-DXC"/>
+                            <constraint firstItem="VLt-p5-PmS" firstAttribute="trailing" secondItem="NYd-X1-SAP" secondAttribute="trailing" id="JNx-8b-mhr"/>
+                            <constraint firstItem="Vcp-OZ-ZOz" firstAttribute="bottom" secondItem="yj3-Kh-u3u" secondAttribute="bottom" id="LQE-9E-FLY"/>
+                            <constraint firstItem="Vcp-OZ-ZOz" firstAttribute="bottom" secondItem="JoB-vx-7Kt" secondAttribute="bottom" id="MFu-3y-atE"/>
+                            <constraint firstItem="Vcp-OZ-ZOz" firstAttribute="top" secondItem="NYd-X1-SAP" secondAttribute="top" id="NPP-fi-AL4"/>
+                            <constraint firstItem="08Z-KB-SjQ" firstAttribute="top" secondItem="db4-cI-6x0" secondAttribute="bottom" constant="8" symbolic="YES" id="PP4-XZ-AYq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JoB-vx-7Kt" secondAttribute="trailing" constant="-6" id="Tib-2U-Rqd"/>
+                            <constraint firstItem="Vcp-OZ-ZOz" firstAttribute="top" secondItem="VQZ-Vv-b8v" secondAttribute="bottom" constant="8" symbolic="YES" id="WSt-yk-UUR"/>
+                            <constraint firstItem="VQZ-Vv-b8v" firstAttribute="top" secondItem="08Z-KB-SjQ" secondAttribute="bottom" constant="8" symbolic="YES" id="XGY-fv-byh"/>
+                            <constraint firstItem="Vcp-OZ-ZOz" firstAttribute="leading" secondItem="XXQ-a0-Obd" secondAttribute="leadingMargin" id="ZhB-4q-CFK"/>
+                            <constraint firstItem="VLt-p5-PmS" firstAttribute="centerX" secondItem="XXQ-a0-Obd" secondAttribute="centerX" id="c0m-h0-12T"/>
+                            <constraint firstItem="Vcp-OZ-ZOz" firstAttribute="bottom" secondItem="NYd-X1-SAP" secondAttribute="bottom" id="c8R-4T-3kw"/>
+                            <constraint firstItem="VLt-p5-PmS" firstAttribute="trailing" secondItem="VQZ-Vv-b8v" secondAttribute="trailing" id="cQc-y8-jwa"/>
+                            <constraint firstItem="VLt-p5-PmS" firstAttribute="leading" secondItem="yj3-Kh-u3u" secondAttribute="leading" id="dD3-I6-xp7"/>
+                            <constraint firstItem="JoB-vx-7Kt" firstAttribute="baseline" secondItem="yj3-Kh-u3u" secondAttribute="baseline" id="eea-QM-zuf"/>
+                            <constraint firstAttribute="bottom" secondItem="VLt-p5-PmS" secondAttribute="bottom" constant="20" symbolic="YES" id="g3K-CC-xwm"/>
+                            <constraint firstItem="Vcp-OZ-ZOz" firstAttribute="top" secondItem="JoB-vx-7Kt" secondAttribute="top" id="kd6-Zp-ecQ"/>
+                            <constraint firstItem="JoB-vx-7Kt" firstAttribute="firstBaseline" secondItem="yj3-Kh-u3u" secondAttribute="firstBaseline" id="nld-z6-2IS"/>
+                            <constraint firstItem="VLt-p5-PmS" firstAttribute="trailing" secondItem="08Z-KB-SjQ" secondAttribute="trailing" id="sHj-Ec-oy0"/>
+                            <constraint firstItem="Vcp-OZ-ZOz" firstAttribute="trailing" secondItem="yj3-Kh-u3u" secondAttribute="trailing" id="syx-DX-t3n"/>
+                            <constraint firstItem="NYd-X1-SAP" firstAttribute="leading" secondItem="Vcp-OZ-ZOz" secondAttribute="trailing" constant="83" id="vro-Eh-cgk"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FyA-lb-6rR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3797.5999999999999" y="-1236.4317841079462"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="joE-pn-Wbx">
+            <objects>
+                <viewController id="bkg-Iw-XBx" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="I9J-4w-J36"/>
+                        <viewControllerLayoutGuide type="bottom" id="Oww-Xl-w40"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Hcv-ng-FDb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="6" translatesAutoresizingMaskIntoConstraints="NO" id="CeD-rl-fum">
+                                <rect key="frame" x="16" y="109" width="343" height="449"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="psO-0c-MV2">
+                                <rect key="frame" x="240" y="617" width="119" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.30134901930000002" green="0.91631217279999999" blue="0.28662230109999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <state key="normal" title="Примерить">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="30G-I4-vxA">
+                                <rect key="frame" x="16" y="617" width="119" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.92858311520000003" green="0.41229485389999998" blue="0.16936866810000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <state key="normal" title="Назад">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="LmC-L9-2kZ" kind="presentation" id="RF3-a0-JqY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZcU-R0-P2s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4454" y="-1236"/>
+        </scene>
+        <!--Tattoo VR-->
+        <scene sceneID="b7L-Ak-wOe">
+            <objects>
+                <viewController id="hYL-C6-kcU" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FPR-ga-irL"/>
+                        <viewControllerLayoutGuide type="bottom" id="O4b-DG-XyR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dVN-gp-D3w">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="11" translatesAutoresizingMaskIntoConstraints="NO" id="zi0-KU-XAV">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Мой профиль" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e5W-ZB-FQN">
+                                <rect key="frame" x="10" y="74" width="343" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="1UH-Kb-t4o"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="zi0-KU-XAV" secondAttribute="trailing" id="6wb-iB-H92"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="e5W-ZB-FQN" secondAttribute="trailing" constant="6" id="hpX-Dv-SpK"/>
+                            <constraint firstItem="e5W-ZB-FQN" firstAttribute="leading" secondItem="dVN-gp-D3w" secondAttribute="leadingMargin" constant="-6" id="hzR-vJ-TWW"/>
+                            <constraint firstItem="e5W-ZB-FQN" firstAttribute="top" secondItem="FPR-ga-irL" secondAttribute="bottom" constant="10" id="kma-un-dKy"/>
+                            <constraint firstItem="zi0-KU-XAV" firstAttribute="bottom" secondItem="O4b-DG-XyR" secondAttribute="top" id="qws-4h-jMa"/>
+                            <constraint firstItem="zi0-KU-XAV" firstAttribute="top" secondItem="FPR-ga-irL" secondAttribute="bottom" id="vVQ-VL-4FC"/>
+                            <constraint firstItem="zi0-KU-XAV" firstAttribute="leading" secondItem="dVN-gp-D3w" secondAttribute="leading" id="vkr-mR-Sd0"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Tattoo VR" id="gkS-nS-arU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y6q-Ne-MQp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3025" y="828"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Hd3-UL-JW2">
+            <objects>
+                <tabBarController id="2Wh-rJ-dCT" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="urJ-YV-gxX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Tfc-4Y-1L0" kind="relationship" relationship="viewControllers" id="GcW-Ts-Elg"/>
+                        <segue destination="JiG-He-V6S" kind="relationship" relationship="viewControllers" id="QgQ-FE-TLS"/>
+                        <segue destination="uTj-N1-uzm" kind="relationship" relationship="viewControllers" id="VG5-yh-5ux"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lo8-6k-aTz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1558" y="138"/>
+        </scene>
+        <!--Категории-->
+        <scene sceneID="CAe-by-U6q">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Tfc-4Y-1L0" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Категории" image="Сategories" id="33L-ue-aGd"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fWa-LZ-1ln">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="psC-TI-8Rn" kind="relationship" relationship="rootViewController" id="dt9-S6-DNe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e4z-5m-J4D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2342" y="-537"/>
+        </scene>
+        <!--Статьи-->
+        <scene sceneID="cXe-DZ-SQR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JiG-He-V6S" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Статьи" image="Catalog" id="p6l-3Y-POI"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cDl-D6-vHH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="54A-k6-z0s" kind="relationship" relationship="rootViewController" id="BSv-jm-8qB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4E9-2R-mJj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2342" y="139"/>
+        </scene>
+        <!--Профиль-->
+        <scene sceneID="ju8-FL-CPI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uTj-N1-uzm" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Профиль" image="Profile" id="PEu-cs-bpL"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PRt-zU-PVc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hYL-C6-kcU" kind="relationship" relationship="rootViewController" id="It2-OL-e3D"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bfs-Iw-MR5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2342" y="828"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="f4p-aR-8GF">
+            <objects>
+                <viewController id="8KG-DZ-mJJ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EBb-y7-UUO"/>
+                        <viewControllerLayoutGuide type="bottom" id="oss-Ot-TDg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YS1-K9-GZK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Животные" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DDC-Lt-ISn">
+                                <rect key="frame" x="16" y="28" width="343" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="30" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tcJ-i8-05X">
+                                <rect key="frame" x="16" y="57" width="343" height="143.5"/>
+                                <string key="text">Тату животных всегда символичны. Такие картины на теле имеют особый смысл. Каждый представитель животного мира облаает своими неповторимыми чертами, повадками, характером. Многие люди, делая татуировку, стремятся таким образом наделить себя особой силой или перенять особенность того или иного существа.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="scorpion-tattoos-designs-78-1" translatesAutoresizingMaskIntoConstraints="NO" id="Exp-Xk-dPy">
+                                <rect key="frame" x="16" y="208.5" width="130" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="jaM-8P-akT"/>
+                                    <constraint firstAttribute="height" constant="130" id="rsh-c3-zD7"/>
+                                </constraints>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="Tiger" translatesAutoresizingMaskIntoConstraints="NO" id="DJK-sM-pR9">
+                                <rect key="frame" x="229" y="208.5" width="130" height="130"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hFI-Ob-ADY">
+                                <rect key="frame" x="16" y="208.5" width="130" height="130"/>
+                                <connections>
+                                    <segue destination="ohT-QR-KdF" kind="presentation" id="be8-0z-jw7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ttC-YI-x8E">
+                                <rect key="frame" x="229" y="208.5" width="130" height="130"/>
+                                <connections>
+                                    <segue destination="L6i-Fa-eH9" kind="presentation" id="YZU-8z-Lbf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tNB-uL-wp1">
+                                <rect key="frame" x="16" y="617" width="343" height="30"/>
+                                <color key="backgroundColor" red="0.92858311520000003" green="0.41229485389999998" blue="0.16936866810000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="b8r-2f-s4r"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <state key="normal" title="назад">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="2Wh-rJ-dCT" kind="presentation" id="cO7-2w-iKY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hFI-Ob-ADY" firstAttribute="top" secondItem="ttC-YI-x8E" secondAttribute="top" id="3Z7-ow-i50"/>
+                            <constraint firstItem="hFI-Ob-ADY" firstAttribute="baseline" secondItem="ttC-YI-x8E" secondAttribute="baseline" id="9Wo-pb-ta6"/>
+                            <constraint firstItem="DJK-sM-pR9" firstAttribute="top" secondItem="ttC-YI-x8E" secondAttribute="top" id="BgQ-3X-SQ0"/>
+                            <constraint firstItem="tcJ-i8-05X" firstAttribute="top" secondItem="DDC-Lt-ISn" secondAttribute="bottom" constant="5" id="C1d-je-f9X"/>
+                            <constraint firstItem="Exp-Xk-dPy" firstAttribute="leading" secondItem="hFI-Ob-ADY" secondAttribute="leading" id="CDD-54-ruZ"/>
+                            <constraint firstItem="DDC-Lt-ISn" firstAttribute="trailing" secondItem="YS1-K9-GZK" secondAttribute="trailingMargin" id="Fvj-s5-QhN"/>
+                            <constraint firstItem="ttC-YI-x8E" firstAttribute="firstBaseline" secondItem="hFI-Ob-ADY" secondAttribute="firstBaseline" id="LiL-LZ-htx"/>
+                            <constraint firstItem="DDC-Lt-ISn" firstAttribute="leading" secondItem="tcJ-i8-05X" secondAttribute="leading" id="Mwt-KM-5Sw"/>
+                            <constraint firstAttribute="bottom" secondItem="tNB-uL-wp1" secondAttribute="bottom" constant="20" symbolic="YES" id="RQP-00-7uq"/>
+                            <constraint firstItem="hFI-Ob-ADY" firstAttribute="top" secondItem="tcJ-i8-05X" secondAttribute="bottom" constant="8" symbolic="YES" id="RoG-J9-kOs"/>
+                            <constraint firstItem="DJK-sM-pR9" firstAttribute="bottom" secondItem="ttC-YI-x8E" secondAttribute="bottom" id="SX5-z9-caN"/>
+                            <constraint firstItem="ttC-YI-x8E" firstAttribute="trailing" secondItem="tNB-uL-wp1" secondAttribute="trailing" id="TGk-VU-Xhu"/>
+                            <constraint firstItem="Exp-Xk-dPy" firstAttribute="trailing" secondItem="hFI-Ob-ADY" secondAttribute="trailing" id="Yn8-9O-8eE"/>
+                            <constraint firstItem="DDC-Lt-ISn" firstAttribute="trailing" secondItem="tcJ-i8-05X" secondAttribute="trailing" id="bVl-6O-pAf"/>
+                            <constraint firstItem="Exp-Xk-dPy" firstAttribute="top" secondItem="hFI-Ob-ADY" secondAttribute="top" id="gUl-xl-Si0"/>
+                            <constraint firstItem="tcJ-i8-05X" firstAttribute="trailing" secondItem="DJK-sM-pR9" secondAttribute="trailing" id="gZi-4G-UVc"/>
+                            <constraint firstItem="DJK-sM-pR9" firstAttribute="trailing" secondItem="ttC-YI-x8E" secondAttribute="trailing" id="jz7-Fj-gMV"/>
+                            <constraint firstItem="Exp-Xk-dPy" firstAttribute="bottom" secondItem="DJK-sM-pR9" secondAttribute="bottom" id="oPJ-7L-pz1"/>
+                            <constraint firstItem="Exp-Xk-dPy" firstAttribute="bottom" secondItem="hFI-Ob-ADY" secondAttribute="bottom" id="pMH-ps-mwS"/>
+                            <constraint firstItem="tcJ-i8-05X" firstAttribute="leading" secondItem="hFI-Ob-ADY" secondAttribute="leading" id="sGG-4F-bp7"/>
+                            <constraint firstItem="DDC-Lt-ISn" firstAttribute="top" secondItem="EBb-y7-UUO" secondAttribute="bottom" constant="8" symbolic="YES" id="tno-d6-z8f"/>
+                            <constraint firstItem="hFI-Ob-ADY" firstAttribute="leading" secondItem="tNB-uL-wp1" secondAttribute="leading" id="us2-3q-0Va"/>
+                            <constraint firstItem="DJK-sM-pR9" firstAttribute="leading" secondItem="ttC-YI-x8E" secondAttribute="leading" id="vfF-cc-dJr"/>
+                            <constraint firstItem="ttC-YI-x8E" firstAttribute="leading" secondItem="hFI-Ob-ADY" secondAttribute="trailing" constant="83" id="zGh-Id-YP9"/>
+                            <constraint firstItem="DDC-Lt-ISn" firstAttribute="leading" secondItem="YS1-K9-GZK" secondAttribute="leadingMargin" id="zMB-B3-fHO"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GCS-kN-nO6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3798" y="-537"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="wN9-a1-xkq">
+            <objects>
+                <viewController id="ohT-QR-KdF" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Req-DN-amH"/>
+                        <viewControllerLayoutGuide type="bottom" id="86p-rO-4DY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="exm-cX-3Ts">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="scorpion-tattoos-designs-78-1" translatesAutoresizingMaskIntoConstraints="NO" id="MQK-iY-JXF">
+                                <rect key="frame" x="16" y="109" width="343" height="449"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3lA-yd-aqR">
+                                <rect key="frame" x="240" y="617" width="119" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.30134901930000002" green="0.91631217279999999" blue="0.28662230109999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <state key="normal" title="Примерить">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ciK-s2-llg">
+                                <rect key="frame" x="16" y="617" width="119" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.92858311520000003" green="0.41229485389999998" blue="0.16936866810000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <state key="normal" title="Назад">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="8KG-DZ-mJJ" kind="presentation" id="XFb-Qp-gyh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BIW-ac-k3p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4454" y="-537"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="j9J-Sc-GVq">
+            <objects>
+                <viewController id="L6i-Fa-eH9" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2tZ-78-may"/>
+                        <viewControllerLayoutGuide type="bottom" id="arR-Og-W87"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0Ch-u7-Wub">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="Tiger" translatesAutoresizingMaskIntoConstraints="NO" id="UGn-R2-PFk">
+                                <rect key="frame" x="16" y="109" width="343" height="449"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VPe-gB-XPI">
+                                <rect key="frame" x="240" y="617" width="119" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.30134901930000002" green="0.91631217279999999" blue="0.28662230109999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <state key="normal" title="Примерить">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KzC-jl-lZ7">
+                                <rect key="frame" x="16" y="617" width="119" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.92858311520000003" green="0.41229485389999998" blue="0.16936866810000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <state key="normal" title="Назад">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="8KG-DZ-mJJ" kind="presentation" id="CZz-gX-iU9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lGJ-le-cvy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5113" y="-537"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="p91-Sb-bw7">
+            <objects>
+                <viewController id="6bz-xm-eAt" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mki-i0-sYg"/>
+                        <viewControllerLayoutGuide type="bottom" id="wNk-jQ-f7e"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NFD-sc-2ZO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="7001d66416995239f2e95ef435b1cb13" translatesAutoresizingMaskIntoConstraints="NO" id="ZGa-8Y-tTe">
+                                <rect key="frame" x="16" y="109" width="343" height="449"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZZp-xV-Um9">
+                                <rect key="frame" x="240" y="617" width="119" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.30134901930000002" green="0.91631217279999999" blue="0.28662230109999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <state key="normal" title="Примерить">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cp1-IY-pk2">
+                                <rect key="frame" x="16" y="617" width="119" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.92858311520000003" green="0.41229485389999998" blue="0.16936866810000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <state key="normal" title="Назад">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="LmC-L9-2kZ" kind="presentation" id="fzz-iB-C2s"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fzu-F2-gRq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5130" y="-1236"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="11" width="414" height="736"/>
+        <image name="22" width="414" height="736"/>
+        <image name="3" width="500" height="750"/>
+        <image name="6" width="1650" height="2073"/>
+        <image name="7001d66416995239f2e95ef435b1cb13" width="482" height="600"/>
+        <image name="Catalog" width="25" height="25"/>
+        <image name="Profile" width="25" height="25"/>
+        <image name="Tiger" width="500" height="551"/>
+        <image name="scorpion-tattoos-designs-78-1" width="400" height="421"/>
+        <image name="Сategories" width="25" height="25"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="gbZ-Ui-3xA"/>
+        <segue reference="Qfg-3X-ane"/>
+        <segue reference="XFb-Qp-gyh"/>
+    </inferredMetricsTieBreakers>
 </document>
